@@ -23,4 +23,52 @@
 body {
     font-size: 'Barlow Semi Condensed', sans-serif;
     background: radial-gradient(at top, var(--bg-gradient-1), var(--bg-gradient-2));
+    min-height: 100vh;
+    text-transform: uppercase;
+}
+
+.container {
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto;
+    padding-top: 2rem;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 150px;
+    border: 3px solid var(--outline);
+    border-radius: 20px;
+    padding: 1rem 1.4rem 1rem 2rem;
+}
+
+.logo img {
+    height: 100%;
+}
+
+.score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    border-radius: 10px;
+    width: 100px;
+    height: 100%;
+    line-height: 1;
+}
+
+.score-title {
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    color: var(--score-text);
+}
+
+.score-number {
+    font-size: 4rem;
+    font-weight: 600;
+    color: var(--dark-text);
 }
