@@ -72,3 +72,10 @@ body {
     font-weight: 600;
     color: var(--dark-text);
 }
+
+.game {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-area: ;
+}
