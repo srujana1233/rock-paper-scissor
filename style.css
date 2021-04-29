@@ -1,17 +1,24 @@
-@import url(https://fonts.google.com/specimen/Barlow+Semi+Condensed);
+/* Font */
+
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap");
+
+/* Variables */
+
 :root {
     --light-text: #ffffff;
     --dark-text: hsl(229, 25%, 31%);
     --score-text: hsl(229, 64%, 46%);
     --outline: hsl(217, 16%, 45%);
-    --bg-gradient-1: hsl(214, 47%, 23%);
-    --bg-gradient-2: hsl(237, 49%, 15%);
+    --bg-grad-1: hsl(214, 47%, 23%);
+    --bg-grad-2: hsl(237, 49%, 15%);
     --scissors-1: hsl(39, 89%, 49%);
     --scissors-2: hsl(40, 84%, 53%);
     --paper-1: hsl(230, 89%, 62%);
     --paper-2: hsl(230, 89%, 65%);
     --rock-1: hsl(349, 71%, 52%);
     --rock-2: hsl(349, 70%, 56%);
+    --shadow-light: #00000026;
+    --shadow-med: #0000004d;
 }
 
 * {
@@ -21,15 +28,19 @@
 }
 
 body {
-    font-size: 'Barlow Semi Condensed', sans-serif;
-    background: radial-gradient(at top, var(--bg-gradient-1), var(--bg-gradient-2));
+    font-family: "Barlow Semi Condensed", sans-serif;
+    background: radial-gradient(at top, var(--bg-grad-1), var(--bg-grad-2));
     min-height: 100vh;
     text-transform: uppercase;
+    color: var(--light-text);
 }
+
+
+/* Main Content */
 
 .container {
     position: relative;
-    max-width: 600px;
+    max-width: 700px;
     margin: 0 auto;
     padding-top: 2rem;
 }
@@ -53,34 +64,36 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: #ffffff;
+    background: #fff;
     border-radius: 10px;
-    width: 100px;
+    width: 150px;
     height: 100%;
     line-height: 1;
 }
 
-.score-title {
-    font-size: 1rem;
-    letter-spacing: 0.1rem;
+.score__title {
+    font-size: 1.1rem;
+    letter-spacing: 0.1em;
     color: var(--score-text);
 }
 
-.score-number {
+.score__number {
     font-size: 4rem;
-    font-weight: 600;
+    font-weight: 700;
     color: var(--dark-text);
 }
+
+
+/* Game */
 
 .game {
     position: relative;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: (repeat(2, 1fr));
     grid-template-areas: "paper scissors" "rock rock";
-    height: 30rem;
     place-items: center;
+    height: 30rem;
     padding-top: 4rem;
-    ;
 }
 
 .game::before {
@@ -90,7 +103,7 @@ body {
     height: 100%;
     left: 28%;
     top: 35%;
-    background: url("./images/bg-triangle.svg") no-repeat;
+    background: url("./bg-triangle.svg") no-repeat;
     z-index: -1;
 }
 
@@ -340,15 +353,6 @@ body {
     width: 100%;
     padding: 0 2rem;
     text-align: center;
-}
-
-.attribution {
-    font-size: 12px;
-    text-align: center;
-}
-
-.attribution a {
-    color: #ff652f;
 }
 
 
