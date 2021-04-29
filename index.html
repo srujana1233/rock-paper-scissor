@@ -2,42 +2,67 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- displays site properly based on user's device -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
-    <link rel="stylesheet" href="style.css">
-    <script src="./script.js"></script>
-    <title> Skill Safari | Rock, Paper, Scissors</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
 
+    <title>Skill Safari | Rock, Paper, Scissors</title>
 </head>
-<div class="container"></div>
-<header class="header">
-    <img src="./logo.svg" alt="logo" class="class">
-    <div class="score">
-        <div class="score-title">score</div>
-        <div class="score-number">12</div>
+
+<body class="preload">
+    <div class="container">
+        <header class="header">
+            <img src="./logo.svg" alt="logo" class="logo" />
+            <div class="score">
+                <div class="score__title">score</div>
+                <div class="score__number">0</div>
+            </div>
+        </header>
+        <section class="game">
+            <button class="choice-btn" data-choice="paper">
+          <div class="choice paper">
+            <img src="./icon-paper.svg" alt="Paper" />
+          </div>
+        </button>
+            <button class="choice-btn" data-choice="scissors">
+          <div class="choice scissors">
+            <img src="./icon-scissors.svg" alt="Scissors" />
+          </div>
+        </button>
+            <button class="choice-btn" data-choice="rock">
+          <div class="choice rock">
+            <img src="./icon-rock.svg" alt="Rock" />
+          </div>
+        </button>
+        </section>
     </div>
-</header>
-<section class="game"></section>
-<button class="choice-btn" data-choice="paper">
-    <div class="choice-paper"></div>
-    <img src="icon-paper.svg" alt="Paper">
-</button>
-<button class="choice-btn" data-choice="rock">
-    <div class="choice-rock"></div>
-    <img src="./icon-rock.svg" alt="Rock">
-</button>
-<button class="choice-btn" data-choice="scissors">
-    <div class="choice-scissors"></div>
-    <img src="./icon-scissors.svg" alt="Scissors">
-</button>
 
+    <section class="results hidden">
+        <h2 class="results__heading">you picked</h2>
+        <h2 class="results__heading">the house picked</h2>
+        <div class="results__result"></div>
+        <div class="results__winner hidden">
+            <h3 class="results__text"></h3>
+            <button class="play-again">play again</button>
+        </div>
+        <div class="results__result"></div>
+    </section>
 
-
-<body>
-
+    <button class="rules-btn" tabindex="1">rules</button>
+    <div class="modal">
+        <div class="modal__container">
+            <header class="modal__header">
+                <h2 class="modal__heading">rules</h2>
+                <button class="close-btn">
+            <img src="./icon-close.svg" alt="Close Button" />
+          </button>
+            </header>
+            <img src="./image-rules.svg" alt="Rules Image" class="rules-img" />
+        </div>
+    </div>
 
 
 </body>
